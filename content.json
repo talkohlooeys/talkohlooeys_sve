@@ -1,0 +1,91 @@
+{
+    "Format": "1.19.0",
+	
+	"Changes": [
+		{
+            "LogName": "Portraits",
+            "Action": "EditImage",
+            "Target": "Portraits/Alesia, Portraits/Andy, Portraits/Andy_Beach, Portraits/Apples, Portraits/Axel, Portraits/Brooklyn, Portraits/Dusty, Portraits/GuntherSilvian, Portraits/Isaac, Portraits/Jace, Portraits/Jadu, Portraits/Junimo, Portraits/Lance, Portraits/Lance_Beach, Portraits/Magnus, Portraits/MarlonFay, Portraits/Martin, Portraits/Morgan, Portraits/MorrisTod, Portraits/Olivia, Portraits/Olivia_Beach, Portraits/Peaches, Portraits/Scarlett, Portraits/Sophia, Portraits/Sophia_Beach, Portraits/Sophia_Makeup, Portraits/Suki, Portraits/Susan, Portraits/Susan_Beach, Portraits/Victor, Portraits/Victor_Beach, Portraits/Zoey",
+            "FromFile": "assets/{{TargetWithoutPath}}.png",            
+		},
+		
+		{
+			"LogName": "Claire Portrait",
+			"Action": "EditImage",
+			"Target": "Portraits/Claire",
+			"FromFile": "assets/Claire.png",
+			"When": {"LocationName |contains=JojaMart, MovieTheater": false},
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Martin Portrait",
+			"Action": "EditImage",
+			"Target": "Portraits/Martin",
+			"FromFile": "assets/Martin.png",
+			"When": {"LocationName |contains=JojaMart, MovieTheater": false},
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Claire Joja Portrait",
+			"Action": "EditImage",
+			"Target": "Portraits/Claire",
+			"FromFile": "assets/Claire_Joja.png",
+			"When": { "LocationName": "JojaMart" },	
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Martin Joja Portrait",
+			"Action": "EditImage",
+			"Target": "Portraits/Martin",
+			"FromFile": "assets/Martin_Joja.png",
+			"When": { "LocationName": "JojaMart" },
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Claire Theater Portrait1",
+			"Action": "EditImage",
+			"Target": "Portraits/Claire",
+			"FromFile": "assets/Claire_Theater.png",
+			"When": { "Spouse |contains=Claire": false, "DayOfWeek": "Monday, Wednesday, Thursday, Friday, Sunday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Claire Theater Portrait2",
+			"Action": "EditImage",
+			"Target": "Portraits/Claire",
+			"FromFile": "assets/Claire_Theater.png",
+			"When": { "Spouse": "Claire", "DayOfWeek": "Monday, Wednesday, Thursday, Sunday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+			"Update": "OnLocationChange",
+		},
+	
+		{
+			"LogName": "Martin Theater Portrait1",
+			"Action": "EditImage",
+			"Target": "Portraits/Martin",
+			"FromFile": "assets/Martin_Theater.png",
+			"When": { "Spouse |contains=Claire": false, "DayOfWeek": "Tuesday, Saturday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+			"Update": "OnLocationChange",
+		},
+		
+		{
+			"LogName": "Martin Theater Portrait2",
+			"Action": "EditImage",
+			"Target": "Portraits/Martin",
+			"FromFile": "assets/Martin_Theater.png",
+			"When": { "Spouse": "Claire", "DayOfWeek": "Tuesday, Friday, Saturday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+			"Update": "OnLocationChange",
+		},
+		
+		{
+			"LogName": "Shop Portraits",
+			"Action": "EditImage",
+			"Target": "assets/AdventurerLedger, assets/AlesiaVendor, assets/Axel_Vendor1, assets/Axel_Vendor2, assets/BearVendor, assets/BlueJunimo, assets/Chloe_Vendor1, Chloe_Vendor2, assets/Chloe_Vendor3, assets/Chloe_Vendor4, assets/ClaireShop, assets/GreyJunimo, assets/IsaacVendor, assets/Jace_Vendor1, assets/Jace_Vendor2, assets/Jace_Vendor3, assets/MartinShop, assets/PurpleJunimo, assets/RedJunimo, assets/SophiaLedger, assets/YellowJunimo, assets/Zoey_Vendor",
+			"FromFile": "assets/{{TargetWithoutPath}}.png",
+		},
+	]
+}
